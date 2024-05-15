@@ -22,11 +22,17 @@ Sets initial conditions for unit commitment and startup/shutdown based on provid
 **3. Constraints**:
 
 Minimum Up Time: Ensures that a unit cannot start up until after it has been shut down for its minimum down time.
+
 Minimum Down Time: Ensures that a unit cannot be shut down until after it has been operating for its minimum up time.
+
 Online-Offline: Ensures that a unit cannot start up and shut down at the same time.
+
 Start-Up Shut-Down Constraints: Ensures that a unit can either be starting up or shutting down at a given time, but not both.
+
 Power Output Constraints (Pmin, Pmax): Ensures that the power output of each unit is within its minimum and maximum limits.
+
 Constraints on the Rate of Change of Power Output (COM_LOG1, COM_LOG2): Constrains the rate at which the power output can increase or decrease.
+
 Constraints on Hydroelectric Power Output (HydroMin, HydroMax): Ensures that the hydroelectric power output stays within specified limits.
 
 **4. Objective Function**:
