@@ -44,3 +44,7 @@ Maximizes total profit, which is the sum of revenues from power generation minus
 Solves the model using the mixed-integer programming (MIP) solver CPLEX.
 Displays the optimal solution including total profit, power output, unit status, unit commitment, and unit decommitment.
 This model is designed to help optimize the operation of power units, considering factors such as energy production, costs, and constraints on unit operation. It aims to maximize profit while meeting operational requirements and constraints.
+
+## License
+
+This project is licensed under the MIT Licene License - see the [LICENSE.md](LICENSE.md) file for details.
