@@ -1,13 +1,13 @@
 # GAMS_Profit
 This GAMS code represents a model for optimizing the operation of a set of power units over a planning period of 24 hours, with the goal of maximizing profit. Here's a summary of how it works:
 
-Initialization of Data:
+**1. Initialization of Data:
 
 Sets: Defines sets for units, hydro units, unit characteristics, and time steps.
 Table: Initializes data for each unit including maximum and minimum power output, maximum and minimum energy production, costs, and other characteristics.
 Parameters: Sets the price for each time step.
 
-Initialization of Parameters:
+**2. Initialization of Parameters:
 
 Parameters: Initializes parameters based on the data provided in the table.
 Initialization of Variables:
@@ -19,7 +19,7 @@ Sets initial conditions for power output and unit commitment based on provided d
 Defines parameters L(i) and F(i) based on minimum up time (UT) and minimum down time (DT) for each unit.
 Sets initial conditions for unit commitment and startup/shutdown based on provided data.
 
-Constraints:
+**3. Constraints:
 
 Minimum Up Time: Ensures that a unit cannot start up until after it has been shut down for its minimum down time.
 Minimum Down Time: Ensures that a unit cannot be shut down until after it has been operating for its minimum up time.
@@ -29,11 +29,11 @@ Power Output Constraints (Pmin, Pmax): Ensures that the power output of each uni
 Constraints on the Rate of Change of Power Output (COM_LOG1, COM_LOG2): Constrains the rate at which the power output can increase or decrease.
 Constraints on Hydroelectric Power Output (HydroMin, HydroMax): Ensures that the hydroelectric power output stays within specified limits.
 
-Objective Function:
+**4. Objective Function:
 
 Maximizes total profit, which is the sum of revenues from power generation minus operating costs including startup, shutdown, and differential operating costs.
 
-Solution:
+**5. Solution:
 
 Solves the model using the mixed-integer programming (MIP) solver CPLEX.
 Displays the optimal solution including total profit, power output, unit status, unit commitment, and unit decommitment.
